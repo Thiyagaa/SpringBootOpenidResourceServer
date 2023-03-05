@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<body>
+<div class="container text-center">
+  <div>
+    <h2>Login</h2>
+    <br/>
+  </div>
+  <div>
+    <h4><a th:href="@{/oauth2/authorization/google}">Login with Google</a></h4>
+    <h4><a th:href="@{/oauth2/authorization/facebook}">Login with facebook</a></h4>
+    <h4><a th:href="@{/oauth2/authorization/linkedin}">Login with LinkedIn</a></h4>
+    <h4><a th:href="@{/oauth2/authorization/github}">Login with Github</a></h4>
+    <h4><a th:href="@{/oauth2/authorization/okta}">Login with Okta</a></h4>
+  </div>
+</div>
+</body>
+</html>

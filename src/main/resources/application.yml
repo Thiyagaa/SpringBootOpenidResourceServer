@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+# https://help.ivanti.com/ht/help/en_US/ISM/2020/admin/Content/Configure/Security/Open%20ID%20Connect.htm
+# https://docs.spring.io/spring-security/reference/5.6.0-RC1/servlet/oauth2/oauth2-login.html
+spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/templates,classpath:/META-INF/resources/,classpath:/META-INF/resources/webjars/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuerUri: https://accounts.google.com
+          jwkSetUri: https://www.googleapis.com/oauth2/v3/certs
